@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: red;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 100%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Photos')" id="defaultOpen">Photos 
+</button>
+  <button class="tablinks" onclick="openCity(event, 'Itinerary')">Itinerary</button>
+  <button class="tablinks" onclick="openCity(event, 'Accommodation Details')">Accommodation Details</button>
+  <button class="tablinks" onclick="openCity(event, 'Price')">Price</button>
+  <button class="tablinks" onclick="openCity(event, 'Inclusions & Exclusions')">Inclusions & Exclusions</button>
+  <button class="tablinks" onclick="openCity(event, 'Terms & Conditions')">Terms & Conditions</button>
+</div>
+
+<div id="Photos" class="tabcontent">
+  <h3>Photos</h3>
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="images\australia\australia-1.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-2.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-3.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-4.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-5.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-6.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-7.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-8.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-9.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\australia\australia-10.jpg" width="900px" height="500px">
+
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">Previous</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">Next</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+</div>
+
+<div id="Itinerary" class="tabcontent">
+  <h3>Itinerary</h3>
+  <p><b>Day 1: Arrive Melbourne</b></p>
+
+Welcome to Australia. Arrive at Melbourne airport and transfer to hotel. Rest of the day is free for leisure. Overnight stay in Melbourne.
+
+
+<p><b>Day 2: Melbourne - City tour</b></p>
+
+Today after breakfast proceed for morning city tour. This morning’s tour is packed with city sights and historical landmarks. Take a seat and enjoy the bustle of Melbourne’s city as your Driver Guide keeps you posted on what to look out for along the way. First you’ll tour through Melbourne’s city centre. Next you can take a look at the imposing Parliament House followed by a stop at Queen Victoria Market (photo stop only). Next we will stop at the beautiful Fitzroy Gardens. You will be allowed some time to explore the gardens. Later proceed for Guided Tour of Melbourne Cricket Ground. Explore the inner sanctum of the legendary MCG on a behind the scenes tour. Venture into the player changing rooms and step onto the arena itself. Highlights o f this must see tour include: The famous MCC Long Room, MCC Library MCG tapestry, player change rooms, cricketers’ viewing room, Ron Casey media centre, portrait of Sir Donald Bradman and Sachin Tendulkar, a walk on the arena, Cricket Victoria Bill Lawry Centre, City Terrace with vies of the Melbourne Skyline. Meet the guide at the Melbourne Cricket Grounds for this tour that takes you behind the scenes for 1 hour and 15 minutes. Overnight stay in Melbourne.
+
+
+
+<p><b>Day 3: Melbourne – Day excursion to Great Ocean Road</b></p>
+
+Today’s tour is packed with great locations, incredible views and natural wonders. So, sit back and relax while your Driver Guide provides expert commentary on all the key landmarks along the way. The Great Ocean Road is an Australian National Heritage listed road stretching 243 kms along the Victorian coastline. It is one of the most beautiful drives in the world, with pristine beaches, picturesque seaside towns and the 12 Apostles. You will make plenty of scenic stops, including a photo opportunity at the Great Ocean Road Memorial Arch at Eastern View. At the foothills of the Otways lies the gorgeous seaside village of Apollo Bay. Here you can relax and treat yourself to lunch (own expense) at one of the many cafés and restaurants, or you can take a stroll along the picturesque beachfront. The rugged splendour of the approaching Twelve Apostles is just breathtaking. These incredible limestone rock formations up to 45 metres high are the result of erosion that began up to 20 million years ago. There are many walks around the location of the Twelve Apostles providing closer access to the shoreline. From the cliff top viewing area you can absorb the grandeur of this iconic site and take some photographs. Later, Visit the beautiful Loch Ard Gorge and learn of the ill-fated English ship ‘Loch Ard’ that ran aground on nearby Muttonbird Island in 1878. Later we will take a well-earned break at the gorgeous little seaside village of Port Campbell. You can enjoy a wander through the boutique stores and galleries – there’s plenty here to tempt you. Overnight stay in Melbourne.
+
+
+
+
+
+
+
+<p><b>Day 4: Melbourne - Brisbane - Gold Coast</b></p>
+
+Today morning check out from hotel and transfer to Melbourne Airport for your flight to Brisbane. Arrive at Brisbane airport and transfer to Gold Coast. Arrive and check in at hotel. Overnight stay in Gold Coast.
+
+
+<p><b>Day 5: Gold Coast - Visit Movie world</b></p>
+
+After breakfast, proceed to visit Movie world. At Warner Bros. Movie World Stroll down the Main Street of Warner Bros. Movie World and you will discover why they call it Hollywood on the Gold Coast. Hop on board one of the major thrill rides, wander through the Looney Tunes Village and see the exciting stage shows. The range of eats at this park will suit everyone with restaurants galore and concession stands dotted around the park selling cool drinks, popcorn and delicious churros. Also around the park is a number of stores so you can pick up a lasting memory of your time at Movie World. Overnight stay in Gold Coast.
+<p><b>Day 6: Gold Coast - Sea World</b></p>
+
+Today after breakfast proceed to visit Sea world. Enter the wonderful world of Sea World and be not only delighted by the magical animals which call this place home but also the thrilling rides and entertaining shows. Sea World is the only place in Australia where you can get up close and personal with a myriad of sea and land animals. Sea World offers its guests a wonderful experience which not only educates but also entertains them. Learn about our special ecosystems, watch dolphins play and maybe even kiss a seal! There's lots of restaurants, food stalls and refreshment stands as well as shops so you can score yourself a souvenir of your day at Sea World. Overnight stay in Gold Coast.
+
+
+
+
+
+
+<p><b>Day 7: Gold Coast - Brisbane - Cairns</b></p>
+
+This morning check out from hotel and transfer to Brisbane airport to board a flight for Cairns. Arrive and transfer to hotel for check in. Overnight stay in Cairns.
+
+
+
+
+
+
+<p><b>Day 8: Cairns – Full day Green Island Reef Cruise</b></p>
+
+Green Island Great Barrier Reef Tours are one of the most popular things to do whilst in Cairns. Only 45 minutes from Cairns, this tropical Island is a beautiful coral cay on Australia’s Great Barrier Reef with unique island rainforests, surrounded by white sandy beaches & magnificent coral reefs and abundant marine life. A full day reef adventure departing Cairns at 9.00am, this allows 5 hours on Green Island and arrives back in Cairns at 5.00pm. “Big Cat” is a comfortable air-conditioned 35 metre catamaran with spacious interior cabins and a relaxed atmosphere. Travel time to Green Island is just over one hour from Cairns. Overnight stay in Cairns.
+<p><b>Day 9: Cairns - Kuranda Scenic rain & sky rail</b></p>
+
+This morning our driver will greet you, collect your voucher and issue your Kuranda Boarding Pass. Transfer you to Skyrail Rainforest Cableway Smithfield, where you proceed directly to the boarding line, as your Skyrail tickets are already on your Boarding Pass. Be amazed as you journey over and through World Heritage protected Rainforest. Your Boarding Pass is your ticket for this iconic rainforest experience that includes time at both Red Peak and Barron Falls stations, both with spectacular lookouts. Or visit the Rainforest Interpretation Centre. Complimentary guided boardwalk tours are offered throughout the day at Red Peak Station. Upon arrival in Kuranda, it’s time to explore this fascinating village. You might also like to visit Birdworld, the Australian Butterfly Sanctuary or Kuranda Koala Gardens [at own expense]. 10 minutes before your scheduled departure time, board the train and take your seats – your tickets are already on your Boarding Pass. After boarding the train, your journey winds through hand-hewn tunnels, across bridges and around curves, all the time appreciating what an amazing engineering feat it is.Return to Cairns. Overnight stay in Cairns.
+
+
+<p><b>Day 10: Cairns - Sydney</b></p>
+
+This morning check out from hotel and transfer to airport to board a flight for Sydney. Arrive and transfer to hotel for check in. Overnight stay in Sydney.
+
+
+
+
+<p><b>Day 11: Sydney - City tour + 2 in 1 pass</b></p>
+
+In the morning you will be picked up for the Sydney City Tour including Manly Beach. Your Driver will provide expert commentary as you weave your way through the beautiful northern beach suburbs of Sydney. You’ll head out over the Sydney Harbour Bridge, one of the largest steel arch bridges in the world. Just a few kilometres from Sydney city on the lower North Shore is Milsons Point. One of Sydney’s more affluent suburbs, the streets are filled with beautiful homes, churches and schools, many built in the late 1800s. With its incredible views of the harbour and Opera House, and an abundance of leading restaurants, cafés and boutique shops, Milsons Point is a popular destination for both locals and visitors. From Milsons Point you’ll get a fantastic view of the iconic Sydney Opera House. This World Heritage listed building designed by Jørn Utzon is considered a masterpiece of modern architecture and a world class performing arts venue. Time to feel the sand between your toes! The exciting suburb of Manly is famous for its beaches that stretch from Queenscliff up to the North Steyne Beach to Manly Beach. With its relaxed, outdoor lifestyle, manly is a great place to take some time wandering on the beaches and checking out the sights. Tour ends at King Street Wharf. Make your own way to Darling Harbour to utilize your 2 in 1 pass- Choice of any 2 – The Sydney Tower Eye, SEA Life Aquarium, Madame Tussauds OR Wildlife Sydney (10 minutes’ walk from King Street Wharf). Overnight stay in Sydney.
+
+
+
+
+
+
+
+<p><b>Day 12: Sydney - Excursion to Blue Mountains</b></p>
+
+This morning after breakfast proceed for full day tour to the Blue Mountains. Sit back and relax as you travel into the amazing Blue Mountains. Your Driver Guide will provide details of the day’s itinerary while you enjoy the journey west. Entering the National Park and winding your way along Cliff Drive, you’ll take in spectacular views of the Jamison Valley before arriving at a vantage point that has views stretching across to the Three Sisters – a trio of rocky pinnacles. At Scenic World enjoy 360° views of the Jamison Valley. To ride on the famous Scenic Railway, Cableway and Skyway, why not purchase the Unlimited Discovery Pass (see right). Alternatively, embark on a scenic walk for spectacular views over the Jamison Valley, or relax over a coffee in the café. Next is a stop at the picturesque and quaint town of Leura. Here you can grab a bite to eat at one of the many restaurants and cafés or why not choose our optional lunch (see right). On our way back to Sydney we will stop at the Featherdale Wildlife Park. Situated on seven acres of natural bush setting, you’ll be able to hand-feed kangaroos, wallabies and emus and enjoy a face-to-face encounter with one of the friendly koalas. Overnight stay in Sydney.
+
+<p><b>Day 13: Sydney - Departure</b></p>
+
+After breakfast it’s time to check out. Transfer to the airport for your onward flight or back home.
+
+
+
+
+
+</div>
+
+<div id="Accommodation Details" class="tabcontent">
+  <h3>Accommodation Details</h3>
+  <table>
+  <tr>
+    <th>City </th>
+    <th>Standard</th>
+    <th>Deluxe</th>
+    <th>Premium</th>
+    
+    
+    
+    
+  </tr>
+  <tr>
+    <td>Cairns</td>
+    <td>Bay Village Tropical Retreat and Apartments or similar</td>
+    <td>Rydges Esplanade Resort Cairns or similar</td>
+    <td>Hilton Cairns or similar</td>
+
+  </tr>
+
+  <tr>
+    <td>Gold Coast</td>
+    <td>Mantra Legends Hotel or similar</td>
+    <td>Novotel Surfers Paradise or similar</td>
+    <td>Sofitel Broadbeach or similar</td>
+
+  </tr>
+
+  <tr>
+    <td>Melbourne</td>
+    <td>Travelodge Hotel Melbourne, Southbank or similar</td>
+    <td>Vibe Savoy Hotel Melbourne or similar</td>
+    <td>Sofitel Melbourne On Collins or similar</td>
+
+  </tr>
+
+  <tr>
+    <td>Sydney</td>
+    <td>Travelodge Sydney or similar</td>
+    <td>Holiday Inn Darling Sydney or similar</td>
+    <td>Intercontinental Sydney or similar</td>
+
+  </tr>
+  
+    
+    
+    
+   </table>
+  
+ 
+  
+</div>
+<div id="Price" class="tabcontent">
+  <h3>Price Per Person in Indian Rupees</h3>
+
+  <table>
+  <tr>
+    <th>Hotel </th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Twin</th>
+    <th>Triple</th>
+    <th>Single</th>
+    <th>Child with bed</th>
+    <th>Child no bed</th>
+    
+  
+  
+  </tr>
+
+ 
+
+    <tr>
+    <td>Standard</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>110313</td>
+    <td>106665</td>
+    <td>156607</td>
+    <td>75015</td>
+    <td>63198</td>
+  
+    </tr>
+
+    <tr>
+    <td>Standard</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>109183</td>
+    <td>102504</td>
+    <td>167756</td>
+    <td>80153</td>
+    <td>37508</td>
+    
+    </tr>
+
+    <tr>
+    <td>Deluxe</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>126395</td>
+    <td>122696</td>
+    <td>188308</td>
+    <td>90429</td>
+    <td>66794</td>
+  
+    </tr>
+
+    <tr>
+    <td>Deluxe</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>120743</td>
+    <td>113961</td>
+    <td>190877</td>
+    <td>91560</td>
+    <td>39049</td>
+    
+    </tr>
+
+    <tr>
+    <td>Premium</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>154140</td>
+    <td>138110</td>
+    <td>244312</td>
+    <td>81284</td>
+    <td>69363</td>
+  
+    </tr>
+
+    <tr>
+    <td>Premium</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>168938</td>
+    <td>153627</td>
+    <td>287112</td>
+    <td>131276</td>
+    <td>45523</td>
+    
+    </tr>
+
+
+
+    
+  
+  
+</table>
+
+  
+
+  
+</div>
+<div id="Inclusions & Exclusions" class="tabcontent">
+  <h3>Inclusions</h3>
+  <ul>
+  <li>3 Nights in Melbourne with breakfast</li><br>
+  <li>3 Nights in Gold Coast with breakfast </li><br>
+  <li>3 Nights in Cairns with breakfast </li><br>
+  <li>3 Nights in Sydney with breakfast </li><br>
+  <li>Melbourne - Morning City Tour, Guided Tour of Melbourne Cricket Ground, Excursion to Great Ocean Road </li><br>
+  <li>Gold Coast - Movie World,  Sea World</li><br>
+  <li>Cairns - Green Island Great Barrier Reef Tour, Kuranda Rain Forest</li><br>
+  <li>Sydney - Sydney City Tour, 2 in 1 pass, Excursion to Blue Mountains</li><br>
+  <li>Melbourne return airport transfers</li><br>
+  <li>Brisbane airport - Gold coast hotel return transfers</li><br>
+  <li>Cairns return airport transfers </li><br>
+  <li>Sydney return airport transfers</li><br>
+  <li>All transfers and sightseeing on SIC</li><br>
+  <li>{Note: - Kindly be on time for SIC transfer as coach will not wait for more than the confirmed pick up time and there will be no refund provided for missed transfers}</li>
+</ul>
+<h3>Exclusions</h3>
+<ul>
+  <li>Airfare and Taxes</li><br>
+  <li>Visa and Insurances charges</li><br>
+  <li>Any up gradation in hotel room category</li><br>
+  <li>Any meals other than specified above</li><br>
+  <li>Any sightseeing other than mentioned above</li><br>
+  <li>Any Entrance fees or Fees for video or camera permit</li><br>
+  <li>Any item of personal nature like tips, laundry, telephone calls, etc.</li><br>
+  <li>GST will be applicable on total invoice</li>
+  
+</ul>
+</div>
+<div id="Terms & Conditions" class="tabcontent">
+  <h3>Terms & Conditions</h3>
+  <ul>
+  <li>The given prices are valid for travel till 31st March 2019 </li>
+  <li>High season surcharges will be applicable</li>
+  <li>The Rate of Exchange (R.O.E) will be the prevailing rate on the day/date of booking</li>
+  <li>Rates are subject to change without prior notice</li>
+  <li>Rooms/Seats are subject to availability at the time of booking</li>
+  <li>Confirmation of Hotels and other services is subject to availability</li>
+  <li>International hotel check in is 1400hrs and checkout would be 1000hrs</li>
+  <li>Early check in and late checkout subject to availability. Itineraries are subject  to change</li>
+  <li>Cancellation charges applicable as per company policy </li>
+  <li>In case we are not able to provide the same hotels as mentioned, then we shall provide similar alternate properties, change in the cost if any will be advised</li>
+  <li>Passport copies of all the passengers are must to initiate the booking</li>
+  <li>We will not be liable for claims or expenses arising from circumstances beyond our control such as accidents, injuries delayed or cancelled flights and acts or forces of nature</li>
+  
+</ul>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 

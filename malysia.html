@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: red;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 100%;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Photos')" id="defaultOpen">Photos 
+</button>
+  <button class="tablinks" onclick="openCity(event, 'Itinerary')">Itinerary</button>
+  <button class="tablinks" onclick="openCity(event, 'Accommodation Details')">Accommodation Details</button>
+  <button class="tablinks" onclick="openCity(event, 'Price')">Price</button>
+  <button class="tablinks" onclick="openCity(event, 'Inclusions & Exclusions')">Inclusions & Exclusions</button>
+  <button class="tablinks" onclick="openCity(event, 'Terms & Conditions')">Terms & Conditions</button>
+</div>
+
+<div id="Photos" class="tabcontent">
+  <h3>Photos</h3>
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="images\Malaysia\Malaysia-1.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-2.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-3.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-4.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-5.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-6.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-7.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-8.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-9.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-10.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-11.jpg" width="900px" height="500px">
+  <img class="mySlides" src="images\Malaysia\Malaysia-12.jpg" width="900px" height="500px">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">Previous</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">Next</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+</div>
+
+<div id="Itinerary" class="tabcontent">
+  <h3>Itinerary</h3>
+  <p><b>Day 1: Arrive in Kuala Lumpur</b></p>
+
+Welcome to Malaysia. Arrive at Kuala Lumpur airport and transfer to hotel for your stay. Overnight stay in Kuala Lumpur.
+<p><b>Day 2: Kuala Lumpur - Half Day City Tour</b></p>
+
+After breakfast, proceed for half day city tour of Kuala Lumpur. Kuala Lumpur is rich with its history on how it developed from a small tin Miners Settlement to a growing modern city currently. Photo Stop at King Palace, National Monument, Independence Square, National Mosque, etc. Overnight stay in Kuala Lumpur.
+
+
+
+
+<p><b>Day 3: Kuala Lumpur</b></p>
+
+Day is free for Shopping and optional activities. Overnight stay in Kuala Lumpur.
+
+Optional: - One can enjoy full day Sunway Lagoon tour at an additional cost
+
+
+
+
+
+
+<p><b>Day 4: Kuala Lumpur - Departure</b></p>
+
+After breakfast it’s time to check out. Transfer to the airport for your onward flight or back home.
+
+
+
+</div>
+
+<div id="Accommodation Details" class="tabcontent">
+  <h3>Accommodation Details</h3>
+  <table>
+  <tr>
+    <th>City </th>
+    <th>Budget</th>
+    <th>Standard</th>
+    <th>Deluxe</th>
+    <th>Premium</th>
+    
+    
+    
+    
+  </tr>
+  <tr>
+    <td>Kuala Lumpur </td>
+    <td>Ancasa Express at Pudu / My Hotel Bukit Bintang or similar</td>
+    <td>Ancasa Hotel & Spa / Sentral Pudu or similar</td>
+    <td>Grand Seasons/Hotel Royal or similar</td>
+    <td>Istana/ Parkroyal or similar</td>
+    
+    
+    
+   
+  </table>
+  
+ 
+  
+</div>
+<div id="Price" class="tabcontent">
+  <h3>Price Per Person in Indian Rupees</h3>
+
+  <table>
+  <tr>
+    <th>Hotel </th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Twin</th>
+    <th>Triple</th>
+    <th>Single</th>
+    <th>Child with bed</th>
+    <th>Child no bed</th>
+    
+  
+  
+  </tr>
+
+  <tr>
+    <td>Budget</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>6348</td>
+    <td>6419</td>
+    <td>13409</td>
+    <td>7346</td>
+    <td>3923</td>
+  
+    </tr>
+
+    <tr>
+    <td>Budget</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>6562</td>
+    <td>6562</td>
+    <td>14193</td>
+    <td>6491</td>
+    <td>4066</td>
+    
+    </tr>
+
+    <tr>
+    <td>Standard</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>7489</td>
+    <td>7489</td>
+    <td>15834</td>
+    <td>6277</td>
+    <td>3923</td>
+  
+    </tr>
+
+    <tr>
+    <td>Standard</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>7846</td>
+    <td>7846</td>
+    <td>16975</td>
+    <td>7560</td>
+    <td>4280</td>
+    
+    </tr>
+
+    <tr>
+    <td>Deluxe</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>10342</td>
+    <td>10342</td>
+    <td>21254</td>
+    <td>10342</td>
+    <td>6277</td>
+  
+    </tr>
+
+    <tr>
+    <td>Deluxe</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>11768</td>
+    <td>11768</td>
+    <td>24677</td>
+    <td>9629</td>
+    <td>5421</td>
+    
+    </tr>
+
+    <tr>
+    <td>Premium</td>
+    <td>01 Apr 2018</td>
+    <td>30 Sep 2018</td>
+    <td>13908</td>
+    <td>13908</td>
+    <td>28600</td>
+    <td>9771</td>
+    <td>6419</td>
+  
+    </tr>
+
+    <tr>
+    <td>Premium</td>
+    <td>01 Oct 2018</td>
+    <td>31 Mar 2019</td>
+    <td>16689</td>
+    <td>16689</td>
+    <td>34305</td>
+    <td>  11982</td>
+    <td>5706</td>
+    
+    </tr>
+
+
+
+    
+  
+  
+</table>
+
+  
+
+  
+</div>
+<div id="Inclusions & Exclusions" class="tabcontent">
+  <h3>Inclusions</h3>
+  <ul>
+  <li>3 Nights in Kuala Lumpur with Breakfast</li><br>
+  <li>Half day Kuala Lumpur city tour on SIC</li><br>
+  <li>Return airport transfers on SIC</li><br>
+  <li>{Note: - Kindly be on time for SIC transfer as coach will not wait for more than the confirmed pick up time and there will be no refund provided for missed transfers}</li>
+  
+</ul>
+<h3>Exclusions</h3>
+<ul>
+  <li>Airfare and Taxes</li><br>
+  <li>Visa and Insurances charges</li><br>
+  <li>Any up gradation in hotel room category</li><br>
+  <li>Any meals other than specified above</li><br>
+  <li>Any sightseeing other than mentioned above</li><br>
+  <li>Any Entrance fees or Fees for video or camera permit</li><br>
+  <li>Any item of personal nature like tips, laundry, telephone calls, etc.</li><br>
+  <li>GST will be applicable on total invoice</li>
+  
+</ul>
+</div>
+<div id="Terms & Conditions" class="tabcontent">
+  <h3>Terms & Conditions</h3>
+  <ul>
+  <li>The given prices are valid for travel till 31st March 2019 </li>
+  <li>High season surcharges will be applicable</li>
+  <li>The Rate of Exchange (R.O.E) will be the prevailing rate on the day/date of booking</li>
+  <li>Rates are subject to change without prior notice</li>
+  <li>Rooms/Seats are subject to availability at the time of booking</li>
+  <li>Confirmation of Hotels and other services is subject to availability</li>
+  <li>International hotel check in is 1400hrs and checkout would be 1000hrs</li>
+  <li>Early check in and late checkout subject to availability. Itineraries are subject  to change</li>
+  <li>Cancellation charges applicable as per company policy </li>
+  <li>In case we are not able to provide the same hotels as mentioned, then we shall provide similar alternate properties, change in the cost if any will be advised</li>
+  <li>Passport copies of all the passengers are must to initiate the booking</li>
+  <li>We will not be liable for claims or expenses arising from circumstances beyond our control such as accidents, injuries delayed or cancelled flights and acts or forces of nature</li>
+  
+</ul>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
